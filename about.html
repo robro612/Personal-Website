@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!-- SOURCES TO GET STARTED WITH
+w3school.com
+google material.io
+bootstrap
+open color (color pallets)
+google fonts
+fontawesome.com
+vue.js
+jquery
+sass css maker
+pug.js (HTML template library)
+google CSS animation (CSS tricks)
+for libraries and how to code websites -->
+<html>
+  <head>
+    <title>
+      Rohan's Website Home
+    </title>
+    <link rel ='stylesheet' href= './stylesheet.css'/>
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap"
+    rel="stylesheet">
+
+
+    <div class = "wrapper animated">
+      <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        <a class="logo" style="background-image: url('./assets/photos/profilePic.jpg')"></a>
+      </a>
+        <h1 class = "title">
+          Rohan Jha
+        </h1>
+
+
+        <p class = "description" id="tagline">Amateur Professional L33T C0D3R</p>
+        <script>
+          var taglines = Array(
+           "Quid pro quo? We take those 🥰🥰🥰🥰",
+           "Roger Federer's Best Friend",
+            "Your worst nightmare",
+            "Yung black jesus's boi",
+            "The greatest since sliced bread",
+            "The worst since cholera",
+            "why am I still up?",
+            "No like seriously why am i still up?",
+            "What's a nice website like you doing in a user like this?",
+            "Bill called me a QT and I'm still upset"
+            );
+          var rand = Math.floor(Math.random() * taglines.length);
+          function randomTagline()
+          {
+            document.getElementById("tagline").innerHTML = taglines[rand];
+          }
+          randomTagline()
+        </script>
+
+          <div class = "nav">
+            <a class="link" data-title="https://www.linkedin.com/in/rohan-jha-cmu"
+            href="./assets/photos/rafa_copy.jpeg">
+             Projects
+            </a>
+            <a class="link" data-title="https://www.linkedin.com/in/rohan-jha-cmu"
+            href="./about.html">
+             About
+            </a>
+            <a class="link" data-title="./rjharesume.pdf"
+            href = ".//assets/rjharesume.pdf" target="_blank">
+             Resume
+            </a>
+          </div>
+        <div class="socials">
+         <a class="link" data-title="rohan-jha-cmu"
+         href="https://www.linkedin.com/in/rohan-jha-cmu" target="_blank">
+          <img class = icon src=".//assets/social_icons/linkedin.svg" alt="linkedin icon">
+         </a>
+         <a class="link" data-title="robro612"
+         href="https://github.com/robro612" target="_blank">
+           <img class = icon src=".//assets/social_icons/git.svg" alt="github icon">
+         </a>
+         <a class="link" data-title="rjha@andrew.cmu.edu"
+         href="mailto:rjha@andrew.cmu.edu" target="_blank">
+          <img class = icon src="./assets/social_icons/gmail.svg" alt="gmail icon">
+         </a>
+         <!-- <a class="link" data-title="Single and Ready to Mingle"
+         href="https://www.linkedin.com/in/rohan-jha-cmu" target="_blank">
+          <img class = icon src="./social_icons/tinder.svg" alt="tinder icon">
+         </a> -->
+        </div>
+        <hr>
+        <footer class = "footer-stuff">
+          Rohan Jha 2019
+        </footer>
+    </div>
+  </head>
+</html>
