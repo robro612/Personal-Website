@@ -119,6 +119,52 @@ hr {
    text-align: center;
    overflow: none;
 }
+
+.projects {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  overflow: none;
+}
+.projects-content {
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: Helvetica;
+  color: #555;
+  width: 90%;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  overflow: none;
+}
+
+a > .projects-link {
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: Helvetica;
+  color: #0e76a8;
+  width: 90%;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  overflow: none;
+}
+
+.projects-link:hover {
+  opacity: 0.7
+}
+
+
 .socials > .link {
    margin: 0;
    padding: 5px;
@@ -127,10 +173,6 @@ hr {
    display: inline-block;
    height: 35px;
    width: 35px;
-}
-
-.socials > .link:hover > .icon {
-   fill: #0077CC;
 }
 
 .icon {
@@ -199,6 +241,20 @@ hr {
    }
 }
 
+.animated-down {
+   animation: fade-in-down 0.6s;
+   animation-delay: 0.3s;
+   animation-fill-mode: both;
+}
+@keyframes down {
+   0% {
+   transform: translateY(-10px);
+   }
+   100% {
+   transform: translateY(0);
+   }
+}
+
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
@@ -222,7 +278,11 @@ hr {
   50% { border-color: orange; }
 }
 
-
+img {
+  border-radius: 5%;
+  max-width: 50%;
+  height: auto;
+}
 
 .socials > .link:hover:before {
    opacity: 1;
@@ -310,4 +370,12 @@ hr {
   font-family: Helvetica;
   color: #000;
   letter-spacing: 7px;
+}
+
+.about{
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: Helvetica;
+  color: #000000;
+  letter-spacing: 1px;
 }
