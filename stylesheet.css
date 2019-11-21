@@ -121,18 +121,18 @@ hr {
 }
 
 .projects {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: justify;
+  text-align: center;
   overflow: none;
   font-size: 2.00rem;
   font-weight: 300;
   font-family: Helvetica;
   color: #0e76a8;
-  width: 80%;
+  width: 90%;
   margin: 30px auto;
-  letter-spacing: 15px;
+  letter-spacing: 2px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .projects > .link{
@@ -140,16 +140,31 @@ hr {
   margin-bottom: 20px;
   float: left;
   overflow: none;
-  font-size: 2.00rem;
+  font-size: 1.80rem;
   font-weight: 300;
   font-family: Helvetica;
   color: #0e76a8;
-  width: 80%;
-  margin: 30px auto;
-  letter-spacing: 15px;
+  width: 100%;
+  letter-spacing: 2px;
   text-align: center;
 }
 
+.projects > .link:hover {
+  color: #000000;
+}
+
+.projects > .text{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: none;
+  font-size: 1.30rem;
+  font-weight: 300;
+  font-family: Helvetica;
+  color: #000000;
+  width: 100%;
+  letter-spacing: 1px;
+  text-align: left;
+}
 
 
 .socials > .link {
@@ -158,8 +173,8 @@ hr {
    text-decoration: none;
    position: relative;
    display: inline-block;
-   height: 35px;
-   width: 35px;
+   height: 55px;
+   width: 55px;
 }
 
 .icon {
@@ -274,7 +289,7 @@ img {
 .socials > .link:hover:before {
    opacity: 1;
    display: inline-block;
-   transform: translate3d(0, 0, 0);
+   transform: translate3d(0, -8, 0);
    white-space: nowrap;
    overflow: auto;
 }
@@ -282,11 +297,11 @@ img {
    content: attr(data-title);
    display: none;
    position: absolute;
-   bottom: -25px;
-   left: -10px;
+   bottom: -10px;
+   left: auto;
    margin: 0 auto;
    font-size: 13px;
-   padding: 3px 10px;
+   padding: 0px 10px;
    background: #222;
    color: #fff;
    border-radius: 2px;
@@ -301,8 +316,8 @@ img {
 .socials > .link:after {
    content: "";
    position: absolute;
-   top: 38px;
-   left: 17px;
+   top: 40px;
+   left: 27px;
    width: 0;
    height: 0;
    border-left: 5px solid transparent;
@@ -365,4 +380,17 @@ img {
   font-family: Helvetica;
   color: #000000;
   letter-spacing: 1px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  align-items: center;
+}
+
+.flex-container > div {
+  background-color: #fff;
+  width: 100%;
+  margin: 10px;
 }
