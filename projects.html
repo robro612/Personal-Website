@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Rohan's Website Home
+    </title>
+    <link rel ='stylesheet' href= './stylesheet.css'/>
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap"
+    rel="stylesheet">
+
+
+    <div class = "wrapper">
+      <a class="logo" style="background-image: url('./assets/photos/profilePic.jpg')">
+      </a>
+        <h1 class = "title">
+          Rohan Jha
+        </h1>
+        <p class = "description" id="tagline"></p>
+        <script>
+          var taglines = Array(
+           "Carnegie Mellon Freshman",
+            "Coder Extraordinaire",
+            "L33T C0D3R",
+            "San Diegan trying to make it in Pittsburgh",
+            "Seeking employment for the Summer 2020"
+            );
+          var rand = Math.floor(Math.random() * taglines.length);
+          function randomTagline()
+          {
+            document.getElementById("tagline").innerHTML = taglines[rand];
+          }
+          randomTagline()
+        </script>
+
+          <div class = "nav">
+            <a class="link" data-title="https://www.linkedin.com/in/rohan-jha-cmu"
+            href="./index.html">
+             Home
+            </a>
+            <a class="link" data-title="./rjharesume.pdf"
+            href = "./assets/rjharesume.pdf" target="_blank">
+             Resume
+            </a>
+          </div>
+        <div class="socials">
+         <a class="link" data-title="rohan-jha-cmu"
+         href="https://www.linkedin.com/in/rohan-jha-cmu" target="_blank">
+          <img class = icon src=".//assets/social_icons/linkedin.svg" alt="linkedin icon">
+         </a>
+         <a class="link" data-title="robro612"
+         href="https://github.com/robro612" target="_blank">
+           <img class = icon src=".//assets/social_icons/git.svg" alt="github icon">
+         </a>
+         <a class="link" data-title="rjha@andrew.cmu.edu"
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=rjha@andrew.cmu.edu&su=You're Hired!" target="_blank">
+          <img class = icon src="./assets/social_icons/gmail.svg" alt="gmail icon">
+         </a>
+       </div>
+       <input class = "eastereggs" type="text" id="Easter Eggs" value="">
+       </input>
+       <script>
+         function hashCode(str) {
+         return str.split('').reduce((prevHash, currVal) =>
+         (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0);
+         }
+         // from https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript
+
+         document.onkeydown=function(evt){
+         var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+           if(keyCode == 13)
+           {
+             if (hashCode(document.getElementById('Easter Eggs').value.toLowerCase()) == 3208415)
+             {
+                 window.location.href = './index.html'
+             }
+             else if (hashCode(document.getElementById('Easter Eggs').value.toLowerCase()) == -998696838)
+             {
+                 window.location.href = './projects.html'
+             }
+             else if (hashCode(document.getElementById('Easter Eggs').value.toLowerCase()) == -873639720)
+             {
+                 window.location.href = './eastereggs.html'
+             }
+           }
+         }
+       </script>
+        <hr>
+          <div class = "projects flex-container animated">
+            <a class = "projects link"
+            href = "https://github.com/robro612/Low-Poly-Generator"
+            target="_blank">
+                <u>LowPolyGen</u> <span> <u> December 2019 </u> </span>
+            </a>
+            <p class = "projects text"> LowPolyGen is a Python application I developed as my Fundamentals of Programming and Computer Science (15-112) term project. LowPolyGen mimics the design of Adobe Bridge, an app used for quick previews of images. Instead of a preview, however, I implemented an algorithm using Canny edge detection and Delaunay triangulation to generate a "Low Poly" style render of the selected image.
+            </p>
+            <img src = "./assets/photos/lowPolyGen.png" alt="LowPolyGen">
+            <a class = "projects link"
+            href = "http://impressionator.herokuapp.com"
+            target="_blank">
+                <u>Impressionator</u> <span> <u> September 2019 </u> </span>
+            </a>
+            <p class = "projects text"> Impressionator is a web app developed by
+              myself, Bill Qin, Harvey Zheng, and Dakota Hernandez for the 2019
+              HackCMU Hackathon
+              to generate novel text in the style or styles of predefined
+              corporae (e.g. Trump's Twitter feed, Obama's
+              SOTU addresses, The Holy Bible, etc.). It uses Markov matrices of
+              connected word frequences to take random walks
+              to generate novel text, and can be merged with another model to
+              make a synthesis of the two styles.
+            </p>
+            <a class = "projects link"
+            href = "https://github.com/robro612/Matrix-Calculator"
+            target="_blank">
+                <u>Matrix Calculator</u> <span> <u> May 2019 </u> </span>
+            </a>
+            <p class = "projects text"> Matrix Calculator is a project I made in my senior Linear Algebra class at La Jolla Country Day. Written in C++, it allows users to input matrices and perform a variety of operations on them, including addition, multiplication, inversion,  and iteratively computing its eigenvalues using the QR algorithm.
+            </p>
+          </div>
+        <hr>
+        <footer class = "footer-stuff">
+          Rohan Jha 2019
+        </footer>
+    </div>
+  </head>
+</html>
